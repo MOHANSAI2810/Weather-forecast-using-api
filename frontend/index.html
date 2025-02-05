@@ -5,13 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <h1>Weather App</h1>
-    <input type="text" id="city" placeholder="Enter a city" />
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="weather">Please enter a city to get the weather.</div>
+    <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+    <div class="input-group">
+      <input type="text" id="city" placeholder="Enter a city" />
+      <button onclick="getWeather()"><i class="fas fa-search"></i> Get Weather</button>
+    </div>
+    <div id="loading" class="loading-spinner"></div>
+    <div id="weather" class="weather-info">
+      <p class="default-message">Please enter a city to get the weather.</p>
+      <div class="weather-icon"></div>
+      <div class="weather-details">
+        <p id="temperature"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
